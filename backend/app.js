@@ -1,0 +1,16 @@
+const express = require("express");
+const app = express();
+const cors = require("cors");
+app.use(cors());
+const cookieParser = require("cookie-parser");
+const errorMiddleWare = require("./middleware/error");
+app.use(express.json());
+app.use(cookieParser());
+const product = require("./rotues/productRoute");
+const user = require("./rotues/userRoute");
+const order = require("./rotues/orderRoute");
+app.use("/api/v1", product);
+app.use("/api/v1", user);
+app.use("/api/v1", order);
+app.use(errorMiddleWare);
+module.exports = app;
