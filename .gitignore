@@ -1,10 +1,5 @@
 # .gitignore
 
-
+.env
 # Ignore node_modules in subdirectories (e.g., ecommerce/backend/node_modules)
 **/node_modules/
-
-
-**/node_modules/
-
-backend/.env
