@@ -35,12 +35,8 @@ const options = {
   cartIconMargin: "1vmax",
 };
 
-function Header() {
-  return (
-    <div>
-      <ReactNavbar {...options} />
-    </div>
-  );
-}
+const Header = () => {
+  return <ReactNavbar {...options} />;
+};
 
 export default Header;
